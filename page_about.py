@@ -25,15 +25,24 @@ try:
 		except:
 			title = None
 		try:
-			website =driver.find_element_by_xpath('//div[contains(@style,"border-radius: max(")]//*[contains(@style,"-644px")]/following::div[1]//a').text
+			try:
+				website =driver.find_element_by_xpath('//div[contains(@style,"border-radius: max(")]//*[contains(@style,"-644px")]/following::div[1]//a').text
+			except:
+				website = driver.find_element_by_xpath('//*[contains(@src,"zvm_GlT6_y2.png")]/following::div[1]//a').text
 		except:
 			website = None
 		try:
-			email = driver.find_element_by_xpath('//div[contains(@style,"border-radius: max(")]//*[contains(@style,"-539px")]/following::div[1]//a').text
+			try:
+				email = driver.find_element_by_xpath('//div[contains(@style,"border-radius: max(")]//*[contains(@style,"-539px")]/following::div[1]//a').text
+			except:
+				email = driver.find_element_by_xpath('//*[contains(@src,"4mSNCiGuFsr.png")]/following::div[1]//a').text
 		except:
 			email = None
 		try:
-			phone = driver.find_element_by_xpath('//div[contains(@style,"border-radius: max(")]//*[contains(@style,"-502px")]/following::div[1]//span[text()]').text
+			try:
+				phone = driver.find_element_by_xpath('//div[contains(@style,"border-radius: max(")]//*[contains(@style,"-502px")]/following::div[1]//span[text()]').text
+			except:
+				phone = driver.find_element_by_xpath('//*[contains(@src,"b5OQbxkXYGI.png")]/following::div[1]').text
 		except:
 			phone =None
 		try:
